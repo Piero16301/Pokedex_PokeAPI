@@ -12,7 +12,13 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pokedex PokeAPI'),
+        title: const Text(
+          'Pokedex PokeAPI',
+          style: TextStyle(
+            fontFamily: 'PlaywriteDEGrund-Regular',
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
       ),
       body: const SafeArea(
@@ -79,7 +85,7 @@ class _PokemonListHomeState extends State<PokemonListHome> {
           physics: const AlwaysScrollableScrollPhysics(),
           builderDelegate: PagedChildBuilderDelegate<PokemonList>(
             noItemsFoundIndicatorBuilder: (context) => const Center(
-              child: Text('No se encontraron pokemones'),
+              child: Text('Pokemons not found'),
             ),
             itemBuilder: (context, pokemon, index) {
               return ListTile(
