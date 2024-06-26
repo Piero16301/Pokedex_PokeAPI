@@ -15,35 +15,25 @@ enum HomeStatus {
 class HomeState extends Equatable {
   const HomeState({
     this.homeStatus = HomeStatus.initial,
-    this.companies = const <Company>[],
-    this.index = 0,
-    this.profileController,
+    this.total = 0,
   });
 
   final HomeStatus homeStatus;
-  final List<Company> companies;
-  final int index;
-  final FlyoutController? profileController;
+  final int total;
 
   HomeState copyWith({
     HomeStatus? homeStatus,
-    List<Company>? companies,
-    int? index,
-    FlyoutController? profileController,
+    int? total,
   }) {
     return HomeState(
       homeStatus: homeStatus ?? this.homeStatus,
-      companies: companies ?? this.companies,
-      index: index ?? this.index,
-      profileController: profileController ?? this.profileController,
+      total: total ?? this.total,
     );
   }
 
   @override
   List<Object?> get props => [
         homeStatus,
-        companies,
-        index,
-        profileController,
+        total,
       ];
 }

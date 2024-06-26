@@ -1,6 +1,3 @@
-import 'dart:typed_data';
-
-import 'package:tuple/tuple.dart';
 import 'package:user_api/user_api.dart';
 
 /// {@template user_repository}
@@ -15,6 +12,6 @@ class UserRepository {
   final IUserApi _userApi;
 
   /// Get a list of Pokemon
-  Future<Tuple2<List<PokemonList>, int>> getPokemonList(String url) =>
+  Future<Map<String, dynamic>> getPokemonList(String url) =>
       _userApi.getPokemonList(url);
 }

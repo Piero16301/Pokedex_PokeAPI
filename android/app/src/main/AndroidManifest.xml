@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.piero.podedex.pokeapi.pokedex_pokeapi">
+    package="com.piero.podedex.pokeapi">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="${appName}"
         android:name="${applicationName}"

@@ -8,6 +8,15 @@ GoRouter goRouter() {
       GoRoute(
         path: '/',
         builder: (context, state) => const HomePage(),
+        routes: [
+          GoRoute(
+            path: '/pokemon/:url',
+            builder: (context, state) {
+              final url = state.pathParameters['url'];
+              return PokemonDetailsPage(url: url);
+            },
+          ),
+        ],
       ),
     ],
     debugLogDiagnostics: true,

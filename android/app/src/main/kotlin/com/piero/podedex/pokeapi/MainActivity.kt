@@ -1,4 +1,4 @@
-package com.piero.podedex.pokeapi.pokedex_pokeapi
+package com.piero.podedex.pokeapi
 
 import io.flutter.embedding.android.FlutterActivity
 

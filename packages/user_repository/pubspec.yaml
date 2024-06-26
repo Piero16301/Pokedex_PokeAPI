@@ -10,7 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  tuple: ^2.0.2
   user_api:
     path: ../user_api
 

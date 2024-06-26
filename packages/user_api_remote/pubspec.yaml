@@ -11,9 +11,6 @@ dependencies:
   dio: ^5.4.3+1
   flutter:
     sdk: flutter
-  rxdart: ^0.28.0
-  shared_preferences: ^2.2.3
-  tuple: ^2.0.2
   user_api:
     path: ../user_api
 
