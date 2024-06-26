@@ -14,4 +14,7 @@ class UserRepository {
   /// Get a list of Pokemon
   Future<Map<String, dynamic>> getPokemonList(String url) =>
       _userApi.getPokemonList(url);
+
+  /// Get a Pokemon
+  Future<Pokemon> getPokemon(String url) => _userApi.getPokemon(url);
 }

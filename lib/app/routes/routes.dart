@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:pokedex_pokeapi/home/home.dart';
+import 'package:pokedex_pokeapi/pokemon_details/pokemon_details.dart';
 
 GoRouter goRouter() {
   return GoRouter(
@@ -10,9 +11,9 @@ GoRouter goRouter() {
         builder: (context, state) => const HomePage(),
         routes: [
           GoRoute(
-            path: '/pokemon/:url',
+            path: 'pokemon',
             builder: (context, state) {
-              final url = state.pathParameters['url'];
+              final url = state.uri.queryParameters['url']!;
               return PokemonDetailsPage(url: url);
             },
           ),

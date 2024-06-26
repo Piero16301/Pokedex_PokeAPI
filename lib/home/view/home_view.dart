@@ -83,6 +83,7 @@ class _PokemonListHomeState extends State<PokemonListHome> {
             ),
             itemBuilder: (context, pokemon, index) {
               return ListTile(
+                onTap: () => context.push('/pokemon?url=${pokemon.url}'),
                 title: Text(
                   pokemon.name.toUpperCase(),
                   style: const TextStyle(

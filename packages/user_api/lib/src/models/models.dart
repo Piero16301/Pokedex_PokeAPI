@@ -1,1 +1,11 @@
+export 'ability.dart';
+export 'game_index.dart';
+export 'held_item.dart';
+export 'move.dart';
+export 'name_url.dart';
+export 'poke_type.dart';
+export 'pokemon.dart';
 export 'pokemon_list.dart';
+export 'stat.dart';
+export 'version_detail.dart';
+export 'version_group_detail.dart';

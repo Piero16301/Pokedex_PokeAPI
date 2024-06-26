@@ -30,4 +30,23 @@ class UserApiRemote implements IUserApi {
       throw Exception('Error getting Pokemon list');
     }
   }
+
+  @override
+  Future<Pokemon> getPokemon(String url) async {
+    try {
+      final response = await _httpClient.get<Map<String, dynamic>>(url);
+
+      if (response.statusCode != 200) {
+        throw Exception('Error getting Pokemon');
+      }
+
+      if (response.data == null) {
+        throw Exception('Error getting Pokemon');
+      }
+
+      return Pokemon.fromJson(response.data!);
+    } catch (e) {
+      throw Exception('Error getting Pokemon');
+    }
+  }
 }
